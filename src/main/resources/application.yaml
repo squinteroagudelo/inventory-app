@@ -1,0 +1,19 @@
+server:
+  port: 9595
+  servlet:
+    context-path: /iasinventory
+spring:
+  application:
+    name: ias-inventory
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/inventory_db
+    username: root
+    password: admin123
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+logging:
+  level:
+    org.hibernate.sql: debug
