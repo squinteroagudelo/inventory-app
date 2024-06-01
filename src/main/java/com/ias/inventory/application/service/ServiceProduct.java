@@ -37,7 +37,7 @@ public class ServiceProduct implements IProductServicePort {
                 .findById(id)
                 .map(p -> {
                     p.setName(product.getName());
-                    p.setPrecio(product.getPrecio());
+                    p.setPrice(product.getPrice());
                     return productPersistencePort.save(p);
                 })
                 .orElseThrow(ProductNotFoundException::new);
